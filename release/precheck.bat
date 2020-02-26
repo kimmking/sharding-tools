@@ -17,8 +17,8 @@ REM
 REM maybe https://github.com/apache/incubator-shardingsphere
 REM set RepoUrl=https://gitee.com/kimmking/incubator-shardingsphere
 
-set DistUrl=http://127.0.0.1:8080/
-rem set DistUrl=https://dist.apache.org/repos/dist/dev/incubator/shardingsphere/
+rem set DistUrl=http://127.0.0.1:8080/
+set DistUrl=https://dist.apache.org/repos/dist/dev/incubator/shardingsphere/
 set ReleaseVersion=4.0.1
 rem set WgetQuit=-q may hidden download progress, WgetQuit= will show details
 set WgetQuit=
