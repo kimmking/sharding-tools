@@ -15,11 +15,11 @@ REM
 REM gpg need installed from: https://gpg4win.org/
 REM 
 REM maybe https://github.com/apache/incubator-shardingsphere
-REM set RepoUrl=https://gitee.com/kimmking/incubator-shardingsphere
+REM set RepoUrl=https://gitee.com/kimmking/shardingsphere
 
 rem set DistUrl=http://127.0.0.1:8080/
-set DistUrl=https://dist.apache.org/repos/dist/dev/incubator/shardingsphere/
-set ReleaseVersion=4.0.1
+set DistUrl=https://dist.apache.org/repos/dist/dev/shardingsphere/
+set ReleaseVersion=5.0.0-alpha
 rem set WgetQuit=-q may hidden download progress, WgetQuit= will show details
 set WgetQuit=
 
@@ -43,7 +43,7 @@ echo ==
 echo ==
 echo ==
 echo ========================================================
-set Binary=apache-shardingsphere-incubating-4.0.1-src
+set Binary=apache-shardingsphere-%ReleaseVersion%-src
 echo ==================== %Binary%
 echo ====================
 echo wget %DistUrl%/%ReleaseVersion%/%Binary%.zip.asc...
@@ -93,7 +93,7 @@ echo ==
 echo ==
 echo ==
 echo ========================================================
-set Binary=apache-shardingsphere-incubating-%ReleaseVersion%-sharding-jdbc-bin
+set Binary=apache-shardingsphere-%ReleaseVersion%-sharding-jdbc-bin
 echo ==================== %Binary%
 echo ====================
 
@@ -144,7 +144,7 @@ echo ==
 echo ==
 echo ==
 echo ========================================================
-set Binary=apache-shardingsphere-incubating-%ReleaseVersion%-sharding-proxy-bin
+set Binary=apache-shardingsphere-%ReleaseVersion%-sharding-proxy-bin
 echo ==================== %Binary%
 echo ====================
 
@@ -195,7 +195,7 @@ echo ==
 echo ==
 echo ==
 echo ========================================================
-set Binary=apache-shardingsphere-incubating-%ReleaseVersion%-sharding-ui-bin
+set Binary=apache-shardingsphere-%ReleaseVersion%-sharding-ui-bin
 echo ==================== %Binary%
 echo ====================
 
@@ -239,8 +239,8 @@ gpg --verify %Binary%.tar.gz.asc %Binary%.tar.gz
 echo ==4== gpg --verify %Binary%.tar.gz ======= ::check success!
 
 
-rem git clone https://github.com/apache/incubator-shardingsphere --depth=1
-rem cd incubator-shardingsphere
+rem git clone https://github.com/apache/shardingsphere --depth=1
+rem cd shardingsphere
 rem git checkout -b %ReleaseVersion% origin/%ReleaseVersion%
 
 
